@@ -1,0 +1,1 @@
+# binar-platinum-challenge
