@@ -12,9 +12,9 @@ import os.path
 app.json_encoder = LazyJSONEncoder
 swagger_template = dict(
     info = {
-        'title': LazyString(lambda: 'Text Cleansing API'),
+        'title': LazyString(lambda: 'Text Labeling API with LSTM and ANN model'),
         'version': LazyString(lambda: '1.0.0'),
-        'description': LazyString(lambda: 'This API for Text Cleansing'),
+        'description': LazyString(lambda: 'This API for Text Labeling'),
     },
     host = LazyString(lambda: request.host),
 )
