@@ -1,2 +1,5 @@
 #py cache folder
 __pycache__/
+
+#models folder
+models/
