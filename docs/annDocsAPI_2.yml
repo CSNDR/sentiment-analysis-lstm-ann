@@ -1,11 +1,11 @@
 tags:
-  - name: LSTM
+  - name: ANN
 get:
   description: Teks yang akan di proses
 parameters:
-  - name: upfile
+  - name: text
     in: formData
-    type: file
+    type: string
     required: False
 responses:
   '200':

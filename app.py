@@ -58,6 +58,7 @@ def ANNpost_file():
         app.config['UPLOAD_FOLDER'],
         fileName
     ))
+    
     with open(r"uploadedFiles/{}".format(reqFile.filename), "r+") as f:
         data = f.read()
         f.seek(0)
@@ -82,6 +83,22 @@ def ANNpost_file():
     response_data = jsonify(json_response)
     return response_data
 
+@swag_from('docs/annDocsAPI_2.yml', methods=['POST'])
+@app.route('/ann-model-text', methods=['POST'])
+def ANNtextpredict():
+    
+    text = request.form.get('text')
+    clean_text,bow = TP.get_bow(text)
+    result_prediction = predict_model.predict_ann(bow)
+    for i, x in enumerate(result_prediction):
+        if(i == 0 and x == 1):
+            hasil = "negative"
+        elif(i == 1 and x == 1):
+            hasil = "positive"
+        elif(i == 2 and x == 1):
+            hasil = "neutral"
+    return jsonify({"text":clean_text, "result_sentiment":hasil})
+
 
 @swag_from('docs/lstmDocsAPI.yml', methods=['POST'])
 @app.route('/lstm-model', methods=['POST'])
@@ -93,6 +110,7 @@ def LSTMpost_file():
         app.config['UPLOAD_FOLDER'],
         fileName
     ))
+    
     with open(r"uploadedFiles/{}".format(reqFile.filename), "r+") as f:
         data = f.read()
         f.seek(0)
@@ -111,6 +129,15 @@ def LSTMpost_file():
     response_data = jsonify(json_response)
     return response_data
 
+@swag_from('docs/lstmDocsAPI_2.yml', methods=['POST'])
+@app.route('/lstm-model-text', methods=['POST'])
+def LSTMtextpredict():
+    
+    text = request.form.get('text')
+    clean_text,input_ids = TP.get_tokenizer(text)
+    result_prediction = predict_model.predict_lstm(input_ids)
+    result_prediction = mapping_result(result_prediction)
+    return jsonify({"text":clean_text, "result_sentiment":result_prediction})
 
 if __name__ == '__main__':
     app.run(debug=True)

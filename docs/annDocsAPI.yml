@@ -6,7 +6,7 @@ parameters:
   - name: upfile
     in: formData
     type: file
-    required: True
+    required: False
 responses:
   '200':
     description: Successful response 
