@@ -1,6 +1,0 @@
-flask
-pandas
-regex
-flasgger
-pickle5
-numpy
