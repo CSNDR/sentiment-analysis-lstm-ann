@@ -32,6 +32,10 @@ class TextProcessing():
     # remove punctuation
     def remove_punctuation(self, line) -> str:
         return re.sub(r'[^\w\s]', ' ', line)
+    
+    #remove more space
+    def remove_more_space(self, line) -> str:
+        return re.sub(r'\s+', ' ', line)
 
     # # remove stopword
     # def remove_stopword(self, line) -> str:
@@ -43,6 +47,7 @@ class TextProcessing():
         text = self.normalize_alay(text)
         text = self.remove_punctuation(text)
         # text = self.remove_stopword(text)
+        text = self.remove_more_space(text)
         clean_text = text
         new_df = pd.DataFrame([text], columns=['text'])
         target_predict = self.count_vect.transform(new_df['text'])
@@ -54,6 +59,7 @@ class TextProcessing():
         text = self.normalize_alay(text)
         text = self.remove_punctuation(text)
         # text = self.remove_stopword(text)
+        text = self.remove_more_space(text)
         clean_text = text
         text = self.tokenizer.texts_to_sequences([text])
         return clean_text, pad_sequences(text, maxlen=200)
