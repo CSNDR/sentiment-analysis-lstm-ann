@@ -16,7 +16,7 @@ def call_api_file(upfile, path):
     response = requests.post(url, files=files)
     return response.json()['sentiment result']
     
-st.title("Sentiment Analysis in Bahasa Indonesia")
+st.title("Predict Sentiment Analysis in Bahasa Indonesia")
 st.subheader("Binar Platinum Challenge Projects")
 
 
@@ -32,7 +32,7 @@ if text:
     else:
         path = "ann-model-text"
         result = call_api(text,path)
-    st.write("your result: ", result)
+    st.write("Sentimentt: ", result)
     
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
@@ -46,6 +46,6 @@ if uploaded_file is not None:
         stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
         st.write(stringio.getvalue())
         result = call_api_file(stringio.getvalue(),path)
-    st.write("your result: ", result)
+    st.write("Sentiment: ", result)
 
     
