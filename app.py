@@ -175,4 +175,4 @@ def LSTMtextpredict():
     return jsonify({"text":clean_text, "result_sentiment":result_prediction})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=1234)
+    app.run(debug=True, port=5000)

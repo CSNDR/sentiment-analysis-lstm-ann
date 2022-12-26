@@ -1,20 +1,21 @@
 from io import StringIO
 import streamlit as st
-import pandas as pd
 import requests
     
 def call_api(text, path):
     url = f"http://127.0.0.1:5000/{path}"
     data = {'text': text}
     response = requests.post(url, data=data)
-    return response.json()['result_sentiment']
+    result = response.json()
+    return result
 
 # call api for file upload
 def call_api_file(upfile, path):
     url = f"http://127.0.0.1:5000/{path}"
     files = {'upfile': upfile}
     response = requests.post(url, files=files)
-    return response.json()['sentiment result']
+    result = response.json()
+    return result
     
 st.title("Predict Sentiment Analysis in Bahasa Indonesia")
 st.subheader("Binar Platinum Challenge Projects")
@@ -46,6 +47,6 @@ if uploaded_file is not None:
         stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
         st.write(stringio.getvalue())
         result = call_api_file(stringio.getvalue(),path)
-    st.write("Sentiment: ", result)
+
 
     
