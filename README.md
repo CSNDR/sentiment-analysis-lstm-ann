@@ -65,15 +65,15 @@ PREDICTION RESULT : <br />
 ![image](https://user-images.githubusercontent.com/114272161/223038149-aa1caae7-5bd9-4157-a0fa-c3838c6cc41f.png)
 
 
-CONCLUSION :
-    - ANN (Artificial Neural Network) and LSTM (Long Short-Term Memory) methods respectively gives good results in text classification. However, in the same case, ANN gives better results than LSTM.
+CONCLUSION :<br />
+    - ANN (Artificial Neural Network) and LSTM (Long Short-Term Memory) methods respectively gives good results in text classification. However, in the same case, ANN gives better results than LSTM.<br />
     - Balancing data has a significant influence on the classification results. In the same case, Balanced data gives better results than unbalanced data.
-    - Precision, recall, and f1-score in each class are quite high, indicating that the method is used is able to classify text into the right class with the same level of accuracy tall.
+    - Precision, recall, and f1-score in each class are quite high, indicating that the method is used is able to classify text into the right class with the same level of accuracy tall.<br />
     
- RECOMENDATION :
-  - To improve the accuracy of text classification, it is recommended to do balancing on the data used. This can be done by adding data to minority class or reduce the data of the majority class.
-  - Optimize the hyperparameters used for better classification results.
-  - Consider to using another method besides ANN and LSTM, especially if the desired result has not been achieved.
+ RECOMENDATION :<br />
+  - To improve the accuracy of text classification, it is recommended to do balancing on the data used. This can be done by adding data to minority class or reduce the data of the majority class.<br />
+  - Optimize the hyperparameters used for better classification results.<br />
+  - Consider to using another method besides ANN and LSTM, especially if the desired result has not been achieved.<br />
   
   
   THANK YOU ^.^
