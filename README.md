@@ -5,12 +5,12 @@ Team Members :  Ridha, Novitasari, Dwiky
 Sentiment analysis is a process identify feelings and opinion in the text. Sentiment analysis using NLP to identify sentiment and give interpretation of the results.
 
 BACKGROUND of the STUDY : 
-- The use of social media in Indonesia is high provides a lot of data for sentiment analysis.
+- The use of social media in Indonesia is high, it provides a lot of data for sentiment analysis.
 - Natural language processing (NLP) technology has growing to ease sentiment analysis on social media.
 - Sentiment analysis on social media in Indonesia is popular because it can provide insight about customer feedback and public opinion.
 
 GOAL :
-Sentiment analysis on social media can help find out customer response toservices, understand public opinion, and identify strengths and service weakness.
+Sentiment analysis on social media can help find out customer response to services, understand public opinion, and identify strengths and service weakness.
 
 METHODOLOGY :
 
