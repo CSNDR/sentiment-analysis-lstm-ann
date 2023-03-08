@@ -22,7 +22,7 @@ https://github.com/CSNDR/binar-platinum-challenge/blob/main/dataset/train_prepro
 
 ![image](https://user-images.githubusercontent.com/114272161/223032027-0d6320a6-39eb-4fe2-83d1-c2b057464cf0.png)
 
-We handled imbalance data by drop sentiment positive and add neutral data. We collect the sentiment neutral by translated the wikipedia dataset on Kaggle into Indonesia.
+We handled imbalanced data by dropping positive sentiment and adding neutral data. We collected the neutral sentiment by translating the Wikipedia dataset on Kaggle into Indonesia.
 
 ![image](https://user-images.githubusercontent.com/114272161/223032866-37f37d6d-3af2-486b-8f18-30596fe53aeb.png)
 
